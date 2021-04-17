@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import {
     StyleSheet,
     SafeAreaView,
@@ -12,9 +12,9 @@ import { dummyData, COLORS, SIZES, FONTS } from "../constants"
 
 const Transaction = ({ route }) => {
 
-    const [selectedCurrency, setSelectedCurrency] = React.useState(null)
+    const [selectedCurrency, setSelectedCurrency] = useState(null)
 
-    React.useEffect(() => {
+    useEffect(() => {
         const { currency } = route.params
         setSelectedCurrency(currency)
     })
